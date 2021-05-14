@@ -1,0 +1,2062 @@
+domain: 0.0 1.0 0.0 1.0
+discr: 2 1 4 4 3 
+permeability equation
+permfunc function 1.0;
+force function 0
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+seg: 2 2 2 2   
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+
+domain: 0.0 1.0 0.0 1.0
+discr: 16 16 16 16 3  
+permeability equation
+permfunc function 1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+force function 0.0
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+seg: 8 2 8 2 
+exactsolknown
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -(((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875));
+dertwo function 0;
+
+
+
+
+
+domain: 0.0 2.82843 0.0 2.82843
+discr: 4 4 4 4 3 
+permeability equation
+permfunc function 1.0;
+force function 2*(y-y*y+x-x*x);
+bottombdry dirichlet
+bdryfunc function 0.0;
+rightbdry dirichlet
+bdryfunc function 0.0;
+topbdry dirichlet
+bdryfunc function 0.0;
+leftbdry dirichlet
+bdryfunc function 0.0;
+seg: 2 2 2 2 
+exactsolknown 
+sol function (x-x*x)*(y-y*y);
+derone function (y-y*y)*(1-2*x);
+dertwo function (x-x*x)*(1-2*y);
+
+
+discr: 2 2 4 4 3 
+permeability equation
+permfunc function 1.0;
+force function 0
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+seg: 2 2 2 2   
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 0.0 1.0 0.0 1.0
+discr: 8 8 4 4 3 
+permeability equation
+permfunc function 1.0;
+force function 2*(y-y*y+x-x*x);
+bottombdry robin
+bdryfunc function (x-x*x);
+bdryCoeff const -1.0
+rightbdry robin
+bdryfunc function (y-y*y);
+bdryCoeff const -10.0
+topbdry robin
+bdryfunc function (x-x*x);
+bdryCoeff const -1.0
+leftbdry robin
+bdryfunc function (y-y*y);
+bdryCoeff const 1.0
+seg: 2 2 2 2  
+exactsolknown 
+sol function (x-x*x)*(y-y*y);
+derone function (y-y*y)*(1-2*x);
+dertwo function (x-x*x)*(1-2*y);
+
+
+
+
+
+domain: 0.0 1.0 0.0 1.0
+discr: 4 4 4 4    
+permeability equation
+permfunc function 1.0;
+force function 2*(y-y*y+x-x*x);
+bottombdry neumann
+bdryfunc function (x-x*x);
+rightbdry neumann
+bdryfunc function (y-y*y);
+topbdry neumann
+bdryfunc function (x-x*x);
+leftbdry neumann
+bdryfunc function (y-y*y);
+seg: 2 2 2 2  
+exactsolknown 
+sol function (x-x*x)*(y-y*y);
+derone function (y-y*y)*(1-2*x);
+dertwo function (x-x*x)*(1-2*y);
+
+
+
+domain: 0.0 1.0 0.0 1.0
+
+
+domain: 0.0 1.0 0.0 1.0
+discr: 4 4 4 4    
+permeability equation
+permfunc function 1.0;
+force function 2*(y-y*y+x-x*x);
+bottombdry neumann
+bdryfunc function (x-x*x);
+rightbdry neumann
+bdryfunc function (y-y*y);
+topbdry neumann
+bdryfunc function (x-x*x);
+leftbdry neumann
+bdryfunc function (y-y*y);
+seg: 2 2 2 2  
+exactsolknown 
+sol function (x-x*x)*(y-y*y);
+derone function (y-y*y)*(1-2*x);
+dertwo function (x-x*x)*(1-2*y);
+
+domain: 0.0 1.0 0.0 1.0
+discr: 2 2 4 4 
+permeability equation
+permfunc function  1/((1+x)*(1+y));
+force function 0.0
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+seg: 2 2 2 2  
+exactsolknown
+sol function 1-(x*x+2*x)/3;
+derone function -(2*x+2)/3;
+dertwo function 0;
+
+
+
+
+
+
+
+
+
+domain: 0.0 1.0 0.0 1.0
+discr: 4 4 
+permeability equation
+permfunc function 1.0;
+force function 0
+bottombdry neumann
+bdryfunc const 0
+rightbdry robin
+bdryfunc const 1.0
+bdryCoeff const 2.0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 0.0
+exactsolknown
+sol function x;
+derone function -1;
+dertwo function 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 0.0 1.0 0.0 1.0
+discr: 4 4 
+permeability equation
+permfunc function 1.0;
+force function 0.0
+bottombdry dirichlet
+bdryfunc const 1.0
+rightbdry neumann
+bdryfunc const 0.0
+topbdry dirichlet
+bdryfunc const 0.0
+leftbdry neumann
+bdryfunc const 0.0
+exactsolknown
+sol function 1-y;
+derone function 0;
+dertwo function -1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1.0 1.0
+discr: 8 8 1 1 standard fem
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-y;
+derone function 0;
+dertwo function -1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 32 32 8 8 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0.0
+permeability equation
+permfunc function 1/(1-0.8*sin(6*pi*x))*1/(1-0.8*sin(6*pi*y));
+exactsolknown 
+sol function 1-(2*cos(6*pi*x)+15*pi*x-2)/(15*pi);
+derone function (4*sin(6*pi*x)-5)/5;
+dertwo function 0;
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 32 32 8 8 standard fem
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability equation
+permfunc function 1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+exactsolknown
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -(((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875));
+dertwo function 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1.0 1.0
+discr: 2 2 4 4 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+
+domain: 1 1
+discr: 60 60 4 4 standard fem
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability data
+perm241x241.dat 0.5
+exactsolknown
+sol function 0.0;
+derone function 0.0;
+dertwo function 0.0;
+
+permeability equation
+permfunc function 1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+exactsolknown
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -(((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875));
+dertwo function 0;
+
+
+
+domain: 1.0 1.0
+discr: 2 2 8 8 standard fem
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-y;
+derone function 0;
+dertwo function -1;
+
+
+
+
+
+
+
+domain: 1 1
+discr: 2 2 4 4 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1/((1+x)*(1+y));
+exactsolknown
+sol function 1-(x*x+2*x)/3;
+derone function -(2*x+2)/3;
+dertwo function 0.0;
+
+
+
+
+
+domain: 1 1
+discr: 30 30 8 8 standard fem
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability equation
+permfunc function 1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+exactsolknown
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -(((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875));
+dertwo function 0;
+
+domain: 1.0 1.0
+discr: 3 3 4 4 standard fem
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-y;
+derone function 0;
+dertwo function -1;
+
+
+
+
+
+
+
+domain: 1.0 1.0
+discr: 2 2 4 4 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+
+domain: 1 1
+discr: 30 30 8 8 standard fem
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability equation
+permfunc function 1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+exactsolknown
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -(((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875));
+dertwo function 0;
+
+domain: 1 1
+discr: 2 2 4 4 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1/((1+x)*(1+y));
+exactsolknown
+sol function 1-(x*x+2*x)/3;
+derone function -(2*x+2)/3;
+dertwo function 0.0;
+
+domain: 1.0 1.0
+discr: 2 2 4 4 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 2 2 4 4 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1/((1+x)*(1+y));
+exactsolknown
+sol function 1-(x*x+2*x)/3;
+derone function -(2*x+2)/3;
+dertwo function 0.0;
+
+domain: 1 1
+discr: 2 2 2 2 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force const 0
+permeability equation
+permfunc function 1/(x+1);
+exactsolknown
+sol function -2*x*(x/2+1)/3+1;
+derone function -2*(x+1)/3;
+dertwo function 0;
+method 0
+
+domain: 1 1
+discr: 2 2 4 4 standard fem
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann 
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force const 0
+permeability equation
+permfunc function 1/(1+y);
+exactsolknown
+sol function -2*y*(y/2+1)/3+1;
+derone function 0;
+dertwo function -2*(1+y)/3;
+
+
+
+domain: 1 1
+discr: 2 2 4 4 standard fem
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann 
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force function 0
+permeability equation
+permfunc function 1;
+exactsolknown
+sol function 1-y;
+derone function -1;
+dertwo function 0.0;
+method 0
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 2 2 2 2 standard fem
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann 
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force function 0
+permeability equation
+permfunc function 1/((1+x)*(1+y));
+exactsolknown
+sol function 1-(y*y+2*y)/3;
+derone function 0;
+dertwo function -(2*y+2)/3;
+method 0
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 44 15 5 4 standard fem
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability equation
+permfunc function 1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+exactsolknown
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -(((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875));
+dertwo function 0;
+
+
+permeability data
+spe10_60.dat 1.0
+
+domain: 1.0 1.0
+discr: 8 8 2 2 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+
+
+
+
+
+domain: 1.0 1.0
+discr: 8 8 2 2 standard fem
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+
+domain: 1.0 1.0
+discr: 5 2 30 44 fem irr
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability data
+spe10_38.dat 1.0
+exactsolknown
+sol function 0.0;
+derone function 0.0;
+dertwo function 0.0;
+
+seg0: 0 2 2 0
+seg0: 0 2 2 2
+seg0: 0 2 2 2
+seg0: 0 2 2 2
+seg0: 0 0 2 2
+seg1: 10 10 10 0
+seg1: 10 10 10 10
+seg1: 10 10 10 10
+seg1: 10 10 10 10
+seg1: 10 0 10 10
+seg2: 1 1 1 0
+seg2: 1 1 1 1
+seg2: 1 1 1 1
+seg2: 1 1 1 1
+seg2: 1 0 1 1
+seg3: 20 20 20 0
+seg3: 20 20 20 20
+seg3: 20 20 20 20
+seg3: 20 20 20 20
+seg3: 20 0 20 20
+seg4: 5 5 0 0
+seg4: 5 5 0 5
+seg4: 5 5 0 5
+seg4: 5 5 0 5
+seg4: 5 0 0 5
+
+seg0: 0 2 2 0
+seg1: 0 2 2 2
+seg2: 0 0 2 2
+seg3: 2 2 2 0
+seg4: 2 2 2 2
+seg5: 2 0 2 2
+seg6: 2 2 0 0
+seg7: 2 2 0 2
+seg8: 2 0 0 2
+
+
+
+domain: 1 1
+discr: 3 3 64 32 fem irr
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability equation
+permfunc function 1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+seg0: 0 16 16 0
+seg1: 0 32 32 32
+seg2: 0 0 8 32
+seg3: 16 8 32 0
+seg4: 8 16 16 8
+seg5: 64 0 8 32
+seg6: 32 32 0 0
+seg7: 8 8 0 8
+seg8: 32 0 0 32
+exactsolknown
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -(((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875));
+dertwo function 0;
+
+
+domain: 1.0 1.0
+discr: 2 1 2 2 fem irr
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1.0;
+seg0: 0 2 0 0
+seg1: 0 0 0 1
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 3 3 4 4 fem irr
+seg0: 0 4 4 0
+seg1: 0 4 4 4
+seg2: 0 0 4 4
+seg3: 4 4 4 0
+seg4: 4 4 4 4
+seg5: 4 0 4 4
+seg6: 4 4 0 0
+seg7: 4 4 0 4
+seg8: 4 0 0 4
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+method 0
+
+
+
+
+
+
+domain: 1 1
+discr: 5 5 20 20 fem reg
+seg: 2 2 2 2
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability data
+skyline.dat 1.0
+exactsolknown
+sol function 0.0;
+derone function 0.0;
+dertwo function 0.0;
+
+
+
+
+
+
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability data
+perm241x241.dat 1.0
+exactsolknown
+sol function 0.0;
+derone function 0.0;
+dertwo function 0.0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 4 4 12 12 fem
+seg: 12 12 12 12
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability equation
+permfunc function 1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+exactsolknown
+sol function 0.0;
+derone function 0.0;
+dertwo function 0.0;
+
+
+
+
+skyline.dat 1.0
+
+
+
+
+
+
+
+domain: 1 1
+discr: 2 2 5 5 fem
+seg: 5 5 5 5
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1.0/((1+y));
+exactsolknown
+sol function 1-(x*x+2*x)/3;
+derone function -(2*x+2)/3;
+dertwo function 0;
+method 0 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+permeability equation
+permfunc function 1.0/((1-0.8*sin(6*pi*x))*(1-0.8*sin(6*pi*y)));
+exactsolknown 
+sol function 1-(2*cos(6*pi*x)+15*pi*x-2)/(15*pi);
+derone function (4*sin(6*pi*x)-5)/5;
+dertwo function 0;
+
+
+
+
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875);
+dertwo function 0;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 2 2 4 4 fem
+seg: 4 4 4 4
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann 
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force function 0
+permeability equation
+permfunc function 1/((1+x)*(1+y));
+exactsolknown
+sol function 1-(y*y+2*y)/3;
+derone function 0;
+dertwo function -(2*y+2)/3;
+
+
+
+
+
+
+
+domain: 1 1
+discr: 2 1 32 32 fem
+seg: 32 32 32 32
+bottombdry dirichlet
+bdryfunc const 1.0
+rightbdry neumann
+bdryfunc const 0.0
+topbdry dirichlet
+bdryfunc const 0.0
+leftbdry neumann
+bdryfunc const 0.0
+force function 0.0
+permeability equation
+permfunc function 1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+exactsolknown
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875);
+dertwo function 0;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 8 8 30 30 fem
+seg: 10 10 10 10
+bottombdry neumann
+bdryfunc const 0.0
+rightbdry dirichlet
+bdryfunc const 0.0
+topbdry neumann
+bdryfunc const 0.0
+leftbdry dirichlet
+bdryfunc const 1.0
+force function 0.0
+permeability data
+perm241x241.dat 0.8
+exactsolknown
+sol function 0.0;
+derone function 0.0;
+dertwo function 0.0;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+permeability data
+perm241x241.dat 0.4
+exactsolknown
+sol function 0;
+derone function 0;
+dertwo function 0;
+method 0
+
+
+
+permeability data
+data 1.0
+exactsolknown
+sol function 0;
+derone function 0;
+dertwo function 0;
+method 0
+
+
+
+
+
+domain: 1 1
+discr: 1 2 16 16 fem
+seg: 16 16 16 16
+bottombdry neumann
+bdryfunc function (x-x*x);
+rightbdry dirichlet
+bdryfunc function 0;
+topbdry neumann
+bdryfunc function (x-x*x);
+leftbdry dirichlet
+bdryfunc function 0;
+force function 2*(y-y*y+x-x*x);
+permeability equation
+permfunc const 1
+exactsolknown
+sol function (x-x*x)*(y-y*y);
+
+method 0
+
+domain: 1 1
+discr: 2 1 2 2 fem
+seg: 2 2 2 2
+bottombdry neumann
+bdryfunc function (x-x*x);
+rightbdry neumann
+bdryfunc function (y-y*y);
+topbdry neumann
+bdryfunc function (x-x*x);
+leftbdry neumann
+bdryfunc function (y-y*y);
+force function 2*(y-y*y+x-x*x);
+permeability equation
+permfunc const 1
+exactsolknown
+sol function (x-x*x)*(y-y*y);
+derone function (y-y*y)*(1-2*x);
+dertwo function (x-x*x)*(1-2*y);
+method 0
+
+
+
+
+domain: 1 1
+discr: 2 2 8 8 fem
+seg: 8 8 8 8
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-y;
+derone function 0;
+dertwo function -1;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 2 1 12 12 fem
+seg: 12 12 12 12
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force const 0
+permeability equation
+permfunc function 1/(x+1);
+exactsolknown
+sol function -2*x*(x/2+1)/3+1;
+derone function -2*(x+1)/3;
+dertwo function 0;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 3 3 32 32 fvem
+seg: 32 32 32 32
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1/(1-0.8*sin(6*pi*x))*1/(1-0.8*sin(6*pi*y));
+exactsolknown 
+sol function 1-(2*cos(6*pi*x)+15*pi*x-2)/(15*pi);
+derone function (4*sin(6*pi*x)-5)/5;
+dertwo function 0;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 3 3 4 4 fem
+seg: 4 4 4 4
+bottombdry neumann
+bdryfunc function 0;
+rightbdry neumann
+bdryfunc function 1;
+topbdry neumann
+bdryfunc function 0;
+leftbdry neumann
+bdryfunc function -1;
+force function 0;
+permeability equation
+permfunc function 1/(x+1);
+exactsolknown
+sol function -x;
+derone function -1;
+dertwo function 0;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 4 4 4 4 fvem
+seg: 4 4 4 4
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force const 0
+permeability equation
+permfunc function 1/(x+1);
+exactsolknown
+sol function -2*x*(x/2+1)/3+1;
+derone function -2*(x+1)/3;
+dertwo function 0;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1.0 1.0
+discr: 2 2 6 6 fvdiff
+seg: 7 7 7 7
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force function 0;
+permeability equation
+permfunc const 1
+exactsolknown
+sol function 1-y;
+derone function 0;
+dertwo function -1;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 2 2 32 32 fvdiff
+seg: 32 32 32 32
+bottombdry dirichlet
+bdryfunc const 1
+rightbdry neumann 
+bdryfunc const 0
+topbdry dirichlet
+bdryfunc const 0
+leftbdry neumann
+bdryfunc const 0
+force const 0
+permeability equation
+permfunc function 1/(1+y);
+exactsolknown
+sol function -2*y*(y/2+1)/3+1;
+derone function 0;
+dertwo function -2*(1+y)/3;
+method 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 2 1 8 8 fem
+seg: 8 8 8 8
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function 0
+permeability equation
+permfunc function 1.0;
+exactsolknown
+sol function 1-x;
+derone function -1;
+dertwo function 0;
+method 0
+
+
+
+
+sol function 1-((279720*pi*x-139860*pi)*sin((56*pi*x)/5)+(-1566432*pi*pi*x*x+1566432*pi*pi*x+24975)*cos((56*pi*x)/5)+4390400*pi*pi*pi*x-24975)/(5*(27972*pi*sin((56*pi)/5)+4995*cos((56*pi)/5)+878080*pi*pi*pi-4995));
+derone function -((87720192*pi*pi*pi*x*x-87720192*pi*pi*pi*x)*sin((56*pi*x)/5)+21952000*pi*pi*pi)/(699300*pi*sin((56*pi)/5)+124875*cos((56*pi)/5)+21952000*pi*pi*pi-124875);
+dertwo function 0;
+method 0
+
+1/(0.25-0.999*(x-x*x)*sin(11.2*pi*x))*1/(0.25-0.999*(y-y*y)*cos(5.2*pi*y));
+
+
+
+domain: 1.0 1.0
+discr: 2 2 25 25 fvdiff local fvdiff
+seg: 61 61 61 61
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force const 0
+permeability equation
+permfunc const 1
+exactsolknown
+sol function 1-x;
+
+
+
+
+
+
+
+
+
+
+domain: 1 1
+discr: 25 25 2 2 fvdiff local fvdiff
+seg: 3 3 3 3
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force const 0
+permeability equation
+permfunc function 1/(x+1);
+exactsolknown
+sol function -2*x*(x/2+1)/3+1;
+derone function -2*(x+1)/3;
+dertwo function 0;
+method 1
+
+
+domain: 1 1
+discr: 8 8 8 4 fvdiff local fvdiff
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force const 0
+permeability equation
+permfunc function 1/(x+1);
+exactsolknown
+sol function -2*x*(x/2+1)/3 + 1;
+
+
+
+
+domain: 1 1
+discr: 2 2 4 4 fvdiff local fvdiff
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force const 0
+permeability equation
+permfunc function 1/(x+1);
+exactsolknown
+sol function -2*x*(x/2+1)/3 + 1;
+
+domain: 1.0 1.0
+discr: 4 4 4 4 fvdiff local fvdiff
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet
+bdryfunc const 1
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 0
+force function 0;
+permeability equation
+permfunc const 1
+exactsolknown
+sol function x;
+
+
+
+
+
+
+domain: 1.0 1.0
+discr: 2 1 10 20 fvdiff local fvdiff
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 0
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 1
+force function x;
+permeability equation
+permfunc const 1
+exactsolknown
+sol function  1+(-x*x*x-5*x)/6;
+
+
+
+
+
+domain: 1.0 1.0
+discr: 2 2 2 2 fvdiff local fvdiff
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 1
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 0
+force function 0;
+permeability equation
+permfunc const 1
+exactsolknown
+sol function x;
+
+
+
+
+
+
+
+
+domain: 1.0 1.0
+discr: 160 160 1 1 fvdiff local fvdiff
+bottombdry neumann
+bdryfunc const 0
+rightbdry dirichlet 
+bdryfunc const 1
+topbdry neumann
+bdryfunc const 0
+leftbdry dirichlet
+bdryfunc const 0
+force function 0;
+permeability equation
+permfunc const 1
+exactsolknown
+sol function x;
+
+
+
+domain: 1 1
+discr: 50 50 1 1 fvdiff local fvdiff
+bottombdry neumann
+bdryfunc function 0;
+rightbdry dirichlet
+bdryfunc function 1;
+topbdry neumann
+bdryfunc function 0;
+leftbdry dirichlet
+bdryfunc function 0;
+force function 0;
+permeability equation
+permfunc const 1
+exactsolknown
+sol function x;
+
+
+

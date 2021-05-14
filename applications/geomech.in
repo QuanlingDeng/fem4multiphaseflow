@@ -1,0 +1,16 @@
+domain: 0.0 1.0 0.0 1.0
+discr: 4 4 2
+perm equation
+perm function exp(-y*y+2.0*x);
+force function -exp(x);
+bottombdry dirichlet
+bdryfunc function exp(-x+y*y);
+rightbdry dirichlet
+bdryfunc function exp(-x+y*y);
+topbdry dirichlet
+bdryfunc function exp(-x+y*y);
+leftbdry dirichlet
+bdryfunc function exp(-x+y*y);
+solu function exp(-x+y*y);
+solux function -exp(-x+y*y);
+soluy function 2.0*y*exp(-x+y*y);

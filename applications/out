@@ -1,0 +1,1458 @@
+==10668== Memcheck, a memory error detector
+==10668== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==10668== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==10668== Command: ./twophasemain.exe twophasemain.in
+==10668== Parent PID: 18595
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x45CAF0: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1292)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668==  Address 0x6207820 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x405508: Mesh::GetElementVertices(int, Array<int>&) const (mesh.h:60)
+==10668==    by 0x45CA9A: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1295)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x45CE3F: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1310)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668==  Address 0x6218550 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x405508: Mesh::GetElementVertices(int, Array<int>&) const (mesh.h:60)
+==10668==    by 0x45CD77: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1313)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x46206D: TMesh<2>::GetVertexToVertexTable(STable&) const (mesh.cpp:821)
+==10668==    by 0x4619E0: TMesh<2>::GetElementToEdgeTable(Table&, Array<int>&) const (mesh.cpp:777)
+==10668==    by 0x45CF3A: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1324)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668==  Address 0x6229710 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x461F8C: TMesh<2>::GetVertexToVertexTable(STable&) const (mesh.cpp:815)
+==10668==    by 0x4619E0: TMesh<2>::GetElementToEdgeTable(Table&, Array<int>&) const (mesh.cpp:777)
+==10668==    by 0x45CF3A: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1324)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x461C77: TMesh<2>::GetElementToEdgeTable(Table&, Array<int>&) const (mesh.cpp:803)
+==10668==    by 0x45CF3A: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1324)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668==  Address 0x622a420 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x461A6E: TMesh<2>::GetElementToEdgeTable(Table&, Array<int>&) const (mesh.cpp:785)
+==10668==    by 0x45CF3A: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1324)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x44DC38: Mesh::Print(std::basic_ofstream<char, std::char_traits<char> >&, int) const (mesh.cpp:38)
+==10668==    by 0x40279D: main (twophasemain.cpp:709)
+==10668==  Address 0x622e0b0 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479C5A: Segment::GetVertices(Array<int>&) const (segment.cpp:32)
+==10668==    by 0x40AE08: Mesh::GetBdrElementVertices(int, Array<int>&) const (mesh.h:63)
+==10668==    by 0x44DBC3: Mesh::Print(std::basic_ofstream<char, std::char_traits<char> >&, int) const (mesh.cpp:34)
+==10668==    by 0x40279D: main (twophasemain.cpp:709)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x44DDAA: Mesh::Print(std::basic_ofstream<char, std::char_traits<char> >&, int) const (mesh.cpp:51)
+==10668==    by 0x40279D: main (twophasemain.cpp:709)
+==10668==  Address 0x622f4b0 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x405508: Mesh::GetElementVertices(int, Array<int>&) const (mesh.h:60)
+==10668==    by 0x44DD35: Mesh::Print(std::basic_ofstream<char, std::char_traits<char> >&, int) const (mesh.cpp:47)
+==10668==    by 0x40279D: main (twophasemain.cpp:709)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x44EDE6: Mesh::ParaviewPrint(int) const (mesh.cpp:230)
+==10668==    by 0x4027C3: main (twophasemain.cpp:711)
+==10668==  Address 0x623b770 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x405508: Mesh::GetElementVertices(int, Array<int>&) const (mesh.h:60)
+==10668==    by 0x44ED6B: Mesh::ParaviewPrint(int) const (mesh.cpp:224)
+==10668==    by 0x4027C3: main (twophasemain.cpp:711)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5BD: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x48051C: Array<EvalFunction::step>::Append(EvalFunction::step const&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F3B6: EvalFunction::AddConstant(double) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD3F: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC4B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD9E: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FCA6: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F2F3: EvalFunction::EvalFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D68C: SymbolFunctionFunction::SymbolFunctionFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==  Address 0x6246610 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x48051C: Array<EvalFunction::step>::Append(EvalFunction::step const&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F3B6: EvalFunction::AddConstant(double) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD3F: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC4B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F2F3: EvalFunction::EvalFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D68C: SymbolFunctionFunction::SymbolFunctionFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D4D6: ReadFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4028B7: main (twophasemain.cpp:731)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5BD: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x48051C: Array<EvalFunction::step>::Append(EvalFunction::step const&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F45D: EvalFunction::AddFunction(double (*)(double)) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FDE7: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC7B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC1C: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD9E: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FCA6: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F2F3: EvalFunction::EvalFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D68C: SymbolFunctionFunction::SymbolFunctionFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==  Address 0x62468c0 is 0 bytes inside a block of size 128 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A575: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x48051C: Array<EvalFunction::step>::Append(EvalFunction::step const&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F3B6: EvalFunction::AddConstant(double) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD3F: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC7B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD9E: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FDD4: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC7B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC1C: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD9E: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x47FA07: EvalFunction::Eval(double const*, double*, int) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F4C0: EvalFunction::Eval(double const*) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D2F8: SymbolFunctionFunction::Eval(double*) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x402944: main (twophasemain.cpp:736)
+==10668==  Address 0x6246f00 is 0 bytes inside a block of size 200 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A00: Array<double>::SetSize(int) (array.hpp:130)
+==10668==    by 0x47F67B: EvalFunction::Eval(double const*, double*, int) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F4C0: EvalFunction::Eval(double const*) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D2F8: SymbolFunctionFunction::Eval(double*) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x402944: main (twophasemain.cpp:736)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5BD: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x48051C: Array<EvalFunction::step>::Append(EvalFunction::step const&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F494: EvalFunction::AddOperation(EvalFunction::EVAL_TOKEN) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC8C: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD9E: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FDD4: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC7B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD9E: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC4B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==  Address 0x625c100 is 0 bytes inside a block of size 64 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A575: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x48051C: Array<EvalFunction::step>::Append(EvalFunction::step const&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F3B6: EvalFunction::AddConstant(double) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD3F: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC4B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD9E: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FDD4: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC7B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD9E: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5BD: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x48051C: Array<EvalFunction::step>::Append(EvalFunction::step const&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F3EC: EvalFunction::AddVariable(int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FE11: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC7B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F2F3: EvalFunction::EvalFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D68C: SymbolFunctionFunction::SymbolFunctionFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D4D6: ReadFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40385D: main (twophasemain.cpp:881)
+==10668==  Address 0x6274830 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x48051C: Array<EvalFunction::step>::Append(EvalFunction::step const&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F3EC: EvalFunction::AddVariable(int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FE11: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC4B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F2F3: EvalFunction::EvalFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D68C: SymbolFunctionFunction::SymbolFunctionFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D4D6: ReadFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40385D: main (twophasemain.cpp:881)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x45081C: Mesh::ParaviewPrint(std::basic_ofstream<char, std::char_traits<char> >&, Vector const&, double, double) const (mesh.cpp:504)
+==10668==    by 0x403C9B: main (twophasemain.cpp:922)
+==10668==  Address 0x627b0c0 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x405508: Mesh::GetElementVertices(int, Array<int>&) const (mesh.h:60)
+==10668==    by 0x4507B6: Mesh::ParaviewPrint(std::basic_ofstream<char, std::char_traits<char> >&, Vector const&, double, double) const (mesh.cpp:498)
+==10668==    by 0x403C9B: main (twophasemain.cpp:922)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x4616CD: TMesh<2>::GetElementVerticesCoord(int, Array<double*>&) const (mesh.cpp:874)
+==10668==    by 0x440F01: LinearFEM2D::ComputeEllipticLocalSystem(int, Array<int>&, Array<double*>&) (linearfem2d.cpp:42)
+==10668==    by 0x406D3A: FEM::Assemble() (fem.cpp:43)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x62c09c0 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x46163F: TMesh<2>::GetElementVerticesCoord(int, Array<double*>&) const (mesh.cpp:866)
+==10668==    by 0x440F01: LinearFEM2D::ComputeEllipticLocalSystem(int, Array<int>&, Array<double*>&) (linearfem2d.cpp:42)
+==10668==    by 0x406D3A: FEM::Assemble() (fem.cpp:43)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x441AD6: LinearFEM2D::ComputeEllipticLocalSystem(int, Array<int>&, Array<double*>&) (linearfem2d.cpp:38)
+==10668==    by 0x406D3A: FEM::Assemble() (fem.cpp:43)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x62c08b0 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x440E59: LinearFEM2D::ComputeEllipticLocalSystem(int, Array<int>&, Array<double*>&) (linearfem2d.cpp:38)
+==10668==    by 0x406D3A: FEM::Assemble() (fem.cpp:43)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x441AE2: LinearFEM2D::ComputeEllipticLocalSystem(int, Array<int>&, Array<double*>&) (linearfem2d.cpp:71)
+==10668==    by 0x406D3A: FEM::Assemble() (fem.cpp:43)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x62c0850 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x440DA6: LinearFEM2D::ComputeEllipticLocalSystem(int, Array<int>&, Array<double*>&) (linearfem2d.cpp:34)
+==10668==    by 0x406D3A: FEM::Assemble() (fem.cpp:43)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x406E8C: FEM::Assemble() (fem.cpp:54)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x62c06d0 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x406C9A: FEM::Assemble() (fem.cpp:36)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x445235: LinearFEM2D::ComputeForceLocalSystem(int, Array<int>&, Array<double>&) (linearfem2d.cpp:265)
+==10668==    by 0x407705: FEM::Assemble() (fem.cpp:130)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x6328790 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x444E27: LinearFEM2D::ComputeForceLocalSystem(int, Array<int>&, Array<double>&) (linearfem2d.cpp:265)
+==10668==    by 0x407705: FEM::Assemble() (fem.cpp:130)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x445241: LinearFEM2D::ComputeForceLocalSystem(int, Array<int>&, Array<double>&) (linearfem2d.cpp:277)
+==10668==    by 0x407705: FEM::Assemble() (fem.cpp:130)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x6328730 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x444D74: LinearFEM2D::ComputeForceLocalSystem(int, Array<int>&, Array<double>&) (linearfem2d.cpp:261)
+==10668==    by 0x407705: FEM::Assemble() (fem.cpp:130)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x407797: FEM::Assemble() (fem.cpp:136)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x63286d0 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4076DA: FEM::Assemble() (fem.cpp:127)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x461835: TMesh<2>::GetBdrElementVerticesCoord(int, Array<double*>&) const (mesh.cpp:886)
+==10668==    by 0x445A40: LinearFEM2D::ComputeNeumannLocalSystem(int, int, Array<int>&, Array<double>&) (linearfem2d.cpp:377)
+==10668==    by 0x407AB9: FEM::Assemble() (fem.cpp:181)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x636c8b0 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479C5A: Segment::GetVertices(Array<int>&) const (segment.cpp:32)
+==10668==    by 0x4617A7: TMesh<2>::GetBdrElementVerticesCoord(int, Array<double*>&) const (mesh.cpp:883)
+==10668==    by 0x445A40: LinearFEM2D::ComputeNeumannLocalSystem(int, int, Array<int>&, Array<double>&) (linearfem2d.cpp:377)
+==10668==    by 0x407AB9: FEM::Assemble() (fem.cpp:181)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x445D28: LinearFEM2D::ComputeNeumannLocalSystem(int, int, Array<int>&, Array<double>&) (linearfem2d.cpp:373)
+==10668==    by 0x407AB9: FEM::Assemble() (fem.cpp:181)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x636c7c0 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x445994: LinearFEM2D::ComputeNeumannLocalSystem(int, int, Array<int>&, Array<double>&) (linearfem2d.cpp:373)
+==10668==    by 0x407AB9: FEM::Assemble() (fem.cpp:181)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x445D34: LinearFEM2D::ComputeNeumannLocalSystem(int, int, Array<int>&, Array<double>&) (linearfem2d.cpp:386)
+==10668==    by 0x407AB9: FEM::Assemble() (fem.cpp:181)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x636c770 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4458E3: LinearFEM2D::ComputeNeumannLocalSystem(int, int, Array<int>&, Array<double>&) (linearfem2d.cpp:366)
+==10668==    by 0x407AB9: FEM::Assemble() (fem.cpp:181)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x407B56: FEM::Assemble() (fem.cpp:178)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x636c720 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x407A8B: FEM::Assemble() (fem.cpp:178)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x407B62: FEM::Assemble() (fem.cpp:186)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x636c6d0 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405690: Array<int>::Array(int, int) (array.hpp:52)
+==10668==    by 0x407A14: FEM::Assemble() (fem.cpp:171)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x408C65: FEM::Assemble() (fem.cpp:421)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668==  Address 0x62c0680 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405690: Array<int>::Array(int, int) (array.hpp:52)
+==10668==    by 0x406C2A: FEM::Assemble() (fem.cpp:26)
+==10668==    by 0x404437: main (twophasemain.cpp:986)
+==10668== 
+==10668== Conditional jump or move depends on uninitialised value(s)
+==10668==    at 0x461CD4: TMesh<2>::GetEdgeToElementTable() const (mesh.cpp:731)
+==10668==    by 0x40B53C: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:81)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x461ED4: TMesh<2>::GetEdgeToElementTable() const (mesh.cpp:765)
+==10668==    by 0x40B53C: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:81)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x68d1870 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x47BAF4: Table::GetRow(int, Array<int>&) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46189E: TMesh<2>::GetElementEdges(int, Array<int>&) const (mesh.cpp:830)
+==10668==    by 0x461D89: TMesh<2>::GetEdgeToElementTable() const (mesh.cpp:747)
+==10668==    by 0x40B53C: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:81)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x410CF5: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:121)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x68e0c10 is 0 bytes inside a block of size 48 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40BC18: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:121)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x410D04: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:117)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x639ecb0 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40BB6D: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:117)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x410D22: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:107)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x68e0b00 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40B8CA: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:107)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x410D31: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:253)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x639ebb0 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x405508: Mesh::GetElementVertices(int, Array<int>&) const (mesh.h:60)
+==10668==    by 0x40B88F: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:105)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x476507: DualMesh::GetElemDualInfo(int, Array<double*>&, Array<double*>&, Array<double>&, Array<double>&) (dualmesh.cpp:29)
+==10668==    by 0x4110BC: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:275)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x63ef600 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x46C568: DualMesh::GetElemDualInfo(int, Array<double*>&, Array<double*>&, Array<double>&, Array<double>&) (dualmesh.cpp:29)
+==10668==    by 0x4110BC: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:275)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x476513: DualMesh::GetElemDualInfo(int, Array<double*>&, Array<double*>&, Array<double>&, Array<double>&) (dualmesh.cpp:578)
+==10668==    by 0x4110BC: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:275)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x6935500 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405690: Array<int>::Array(int, int) (array.hpp:52)
+==10668==    by 0x46C54F: DualMesh::GetElemDualInfo(int, Array<double*>&, Array<double*>&, Array<double>&, Array<double>&) (dualmesh.cpp:28)
+==10668==    by 0x4110BC: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:275)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5BD: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x47BAF4: Table::GetRow(int, Array<int>&) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46191A: TMesh<2>::GetEdgeElements(int, Array<int>&) const (mesh.cpp:848)
+==10668==    by 0x413AE1: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:391)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x6935b40 is 0 bytes inside a block of size 4 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x47BAF4: Table::GetRow(int, Array<int>&) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46191A: TMesh<2>::GetEdgeElements(int, Array<int>&) const (mesh.cpp:848)
+==10668==    by 0x4134F7: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:370)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x414698: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:430)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x63efc40 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A575: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x47BAF4: Table::GetRow(int, Array<int>&) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46191A: TMesh<2>::GetEdgeElements(int, Array<int>&) const (mesh.cpp:848)
+==10668==    by 0x413AE1: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:391)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x416493: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:364)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x63efbf0 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x47BAF4: Table::GetRow(int, Array<int>&) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46189E: TMesh<2>::GetElementEdges(int, Array<int>&) const (mesh.cpp:830)
+==10668==    by 0x413481: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:365)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x4164C0: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:351)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x63efa80 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4130EF: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:351)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x4164DE: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:337)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x63ef8b0 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x412F3C: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:337)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x4164FC: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:294)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x63ef770 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x411262: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:294)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x41650B: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:290)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x6935660 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4111A9: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:290)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x41651A: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:284)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x69355a0 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4110D5: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:284)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x416529: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:268)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x6935450 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x410E7F: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:268)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x416538: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:551)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x63ef500 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x405508: Mesh::GetElementVertices(int, Array<int>&) const (mesh.h:60)
+==10668==    by 0x410E44: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:266)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x4158A3: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:496)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x63f04d0 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x47BAF4: Table::GetRow(int, Array<int>&) const (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46191A: TMesh<2>::GetEdgeElements(int, Array<int>&) const (mesh.cpp:848)
+==10668==    by 0x414702: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:436)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x4167E0: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:569)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x655a330 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405690: Array<int>::Array(int, int) (array.hpp:52)
+==10668==    by 0x41658A: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:555)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x416BEB: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:96)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x68d8ac0 is 0 bytes inside a block of size 4,096 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40B773: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:96)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x416BFA: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:90)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x638fb70 is 0 bytes inside a block of size 4,096 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40B676: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:90)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x416C09: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:86)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x638fa20 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40B5A0: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:86)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x416C18: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:85)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x68d1920 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40B587: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:85)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x416C27: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:84)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x638f9c0 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40B56E: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:84)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x416C36: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:591)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668==  Address 0x68d18c0 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40B555: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:83)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x479877: DualMesh::GetElemDualAreas(int, Array<double>&) (dualmesh.cpp:719)
+==10668==    by 0x404674: main (twophasemain.cpp:1021)
+==10668==  Address 0x655e440 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x47857A: DualMesh::GetElemDualAreas(int, Array<double>&) (dualmesh.cpp:719)
+==10668==    by 0x404674: main (twophasemain.cpp:1021)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x479886: DualMesh::GetElemDualAreas(int, Array<double>&) (dualmesh.cpp:852)
+==10668==    by 0x404674: main (twophasemain.cpp:1021)
+==10668==  Address 0x655e3f0 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405690: Array<int>::Array(int, int) (array.hpp:52)
+==10668==    by 0x478561: DualMesh::GetElemDualAreas(int, Array<double>&) (dualmesh.cpp:718)
+==10668==    by 0x404674: main (twophasemain.cpp:1021)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x4046FC: main (twophasemain.cpp:1018)
+==10668==  Address 0x655e3a0 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x405508: Mesh::GetElementVertices(int, Array<int>&) const (mesh.h:60)
+==10668==    by 0x404656: main (twophasemain.cpp:1019)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x40470B: main (twophasemain.cpp:1024)
+==10668==  Address 0x655e340 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40461F: main (twophasemain.cpp:1017)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x4A2F6C: LocalLinearTriangularEUF(Array<double>&, Array<double>&, Function*, Array<double>&) (twophaseflow.cpp:29)
+==10668==    by 0x4A58CC: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:239)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668==  Address 0x659f750 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4A2B40: LocalLinearTriangularEUF(Array<double>&, Array<double>&, Function*, Array<double>&) (twophaseflow.cpp:8)
+==10668==    by 0x4A58CC: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:239)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x4A5970: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:230)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668==  Address 0x659f6f0 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4A57B5: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:230)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x4A597C: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:229)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668==  Address 0x659f690 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4A579C: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:229)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x4A5988: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:246)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668==  Address 0x659f630 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4A5783: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:228)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x4A5F7F: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:305)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668==  Address 0x659f5e0 is 0 bytes inside a block of size 12 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x479F08: Triangle::GetVertices(Array<int>&) const (triangle.cpp:30)
+==10668==    by 0x405508: Mesh::GetElementVertices(int, Array<int>&) const (mesh.h:60)
+==10668==    by 0x4A5736: ElementUpwindFlux(DualMesh*, Array<double*>&, Vector&, Function*, Array<double>&) (twophaseflow.cpp:226)
+==10668==    by 0x4A6296: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:347)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x4A650D: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:337)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668==  Address 0x659ec90 is 0 bytes inside a block of size 2,312 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4A6204: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:337)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x4A6519: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:373)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668==  Address 0x659e340 is 0 bytes inside a block of size 2,312 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4A61EE: TPFTimeMarchSolve(double, int, DualMesh*, Array<double>&, Array<double*>&, Array<double>&, Function*, Vector&, Vector&) (twophaseflow.cpp:336)
+==10668==    by 0x404790: main (twophasemain.cpp:1027)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x404B29: main (twophasemain.cpp:1057)
+==10668==  Address 0x655d9f0 is 0 bytes inside a block of size 2,312 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4045B4: main (twophasemain.cpp:1012)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46C253: Array<Vertex<2> >::~Array() (array.hpp:56)
+==10668==    by 0x463644: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x4636DB: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x404C68: main (twophasemain.cpp:1066)
+==10668==  Address 0x61f49f0 is 0 bytes inside a block of size 4,624 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46C148: Array<Vertex<2> >::SetSize(int) (array.hpp:130)
+==10668==    by 0x45BF42: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1154)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x44D994: Mesh::~Mesh() (mesh.cpp:10)
+==10668==    by 0x46365D: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x4636DB: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x404C68: main (twophasemain.cpp:1066)
+==10668==  Address 0x61f6ec0 is 0 bytes inside a block of size 16 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x45C032: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1157)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x44D9A4: Mesh::~Mesh() (mesh.cpp:10)
+==10668==    by 0x46365D: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x4636DB: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x404C68: main (twophasemain.cpp:1066)
+==10668==  Address 0x622bcb0 is 0 bytes inside a block of size 256 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A60: Array<int>::SetSize(int) (array.hpp:130)
+==10668==    by 0x461B95: TMesh<2>::GetElementToEdgeTable(Table&, Array<int>&) const (mesh.cpp:794)
+==10668==    by 0x45CF3A: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1324)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x45203F: Array<int*>::~Array() (array.hpp:56)
+==10668==    by 0x44D9B4: Mesh::~Mesh() (mesh.cpp:10)
+==10668==    by 0x46365D: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x4636DB: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x404C68: main (twophasemain.cpp:1066)
+==10668==  Address 0x61f6f10 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46BF6C: Array<int*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x45C082: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1158)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x45203F: Array<int*>::~Array() (array.hpp:56)
+==10668==    by 0x44D9C4: Mesh::~Mesh() (mesh.cpp:10)
+==10668==    by 0x46365D: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x4636DB: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x404C68: main (twophasemain.cpp:1066)
+==10668==  Address 0x6206a00 is 0 bytes inside a block of size 2,312 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46BF6C: Array<int*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x45C998: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1286)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x452025: Array<Element*>::~Array() (array.hpp:56)
+==10668==    by 0x44D9D4: Mesh::~Mesh() (mesh.cpp:10)
+==10668==    by 0x46365D: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x4636DB: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x404C68: main (twophasemain.cpp:1066)
+==10668==  Address 0x61f6c80 is 0 bytes inside a block of size 512 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46BF2E: Array<Element*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x45BFE2: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1156)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x452025: Array<Element*>::~Array() (array.hpp:56)
+==10668==    by 0x44D9E4: Mesh::~Mesh() (mesh.cpp:10)
+==10668==    by 0x46365D: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x4636DB: TMesh<2>::~TMesh() (mesh.cpp:2203)
+==10668==    by 0x404C68: main (twophasemain.cpp:1066)
+==10668==  Address 0x61f5c40 is 0 bytes inside a block of size 4,096 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x46BF2E: Array<Element*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x45BF92: TMesh<2>::ConstructTriangularElements(Array<int>&, Array<double>&, bool) (mesh.cpp:1155)
+==10668==    by 0x4631DB: TMesh<2>::TMesh(Array<int>&, Array<double>&, Element::Type, bool) (mesh.cpp:2145)
+==10668==    by 0x40272A: main (twophasemain.cpp:704)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4804DB: Array<EvalFunction::step>::~Array() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F342: EvalFunction::~EvalFunction() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D6E5: SymbolFunctionFunction::~SymbolFunctionFunction() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D741: SymbolFunctionFunction::~SymbolFunctionFunction() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x404CD7: main (twophasemain.cpp:1069)
+==10668==  Address 0x6274ba0 is 0 bytes inside a block of size 256 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A575: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x48051C: Array<EvalFunction::step>::Append(EvalFunction::step const&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F3B6: EvalFunction::AddConstant(double) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD3F: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC4B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBC1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FD9E: EvalFunction::ParsePrimary() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FC7B: EvalFunction::ParseTerm() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47FBF1: EvalFunction::ParseExpression() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47F2F3: EvalFunction::EvalFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x47D68C: SymbolFunctionFunction::SymbolFunctionFunction(std::istream&) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405737: Array<bool>::~Array() (array.hpp:56)
+==10668==    by 0x40669C: Data::~Data() (Data.cpp:225)
+==10668==    by 0x404D12: main (twophasemain.cpp:1072)
+==10668==  Address 0x6275e60 is 0 bytes inside a block of size 4 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A9E: Array<bool>::SetSize(int) (array.hpp:130)
+==10668==    by 0x406484: Data::SetDirichletData(Array<double*> const&, Array<bool> const&) (Data.cpp:181)
+==10668==    by 0x40397C: main (twophasemain.cpp:894)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405737: Array<bool>::~Array() (array.hpp:56)
+==10668==    by 0x4066AE: Data::~Data() (Data.cpp:225)
+==10668==    by 0x404D12: main (twophasemain.cpp:1072)
+==10668==  Address 0x6275d50 is 0 bytes inside a block of size 4 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A9E: Array<bool>::SetSize(int) (array.hpp:130)
+==10668==    by 0x4062FC: Data::SetRobinData(Array<double*> const&, Array<double*> const&, Array<bool> const&) (Data.cpp:165)
+==10668==    by 0x40395C: main (twophasemain.cpp:893)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405737: Array<bool>::~Array() (array.hpp:56)
+==10668==    by 0x4066C0: Data::~Data() (Data.cpp:225)
+==10668==    by 0x404D12: main (twophasemain.cpp:1072)
+==10668==  Address 0x6275ca0 is 0 bytes inside a block of size 4 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x406A9E: Array<bool>::SetSize(int) (array.hpp:130)
+==10668==    by 0x4061E6: Data::SetNeumannData(Array<double*> const&, Array<bool> const&) (Data.cpp:152)
+==10668==    by 0x403938: main (twophasemain.cpp:892)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x4066F6: Data::~Data() (Data.cpp:225)
+==10668==    by 0x404D12: main (twophasemain.cpp:1072)
+==10668==  Address 0x6275eb0 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40698E: Array<double*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x4064F9: Data::SetDirichletData(Array<double*> const&, Array<bool> const&) (Data.cpp:184)
+==10668==    by 0x40397C: main (twophasemain.cpp:894)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x406708: Data::~Data() (Data.cpp:225)
+==10668==    by 0x404D12: main (twophasemain.cpp:1072)
+==10668==  Address 0x6275cf0 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40698E: Array<double*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x40625B: Data::SetNeumannData(Array<double*> const&, Array<bool> const&) (Data.cpp:155)
+==10668==    by 0x403938: main (twophasemain.cpp:892)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x40671A: Data::~Data() (Data.cpp:225)
+==10668==    by 0x404D12: main (twophasemain.cpp:1072)
+==10668==  Address 0x6275e00 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40698E: Array<double*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x4063E7: Data::SetRobinData(Array<double*> const&, Array<double*> const&, Array<bool> const&) (Data.cpp:171)
+==10668==    by 0x40395C: main (twophasemain.cpp:893)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x40672C: Data::~Data() (Data.cpp:225)
+==10668==    by 0x404D12: main (twophasemain.cpp:1072)
+==10668==  Address 0x6275da0 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40698E: Array<double*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x406371: Data::SetRobinData(Array<double*> const&, Array<double*> const&, Array<bool> const&) (Data.cpp:168)
+==10668==    by 0x40395C: main (twophasemain.cpp:893)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x40678E: Data::~Data() (Data.cpp:225)
+==10668==    by 0x404D12: main (twophasemain.cpp:1072)
+==10668==  Address 0x6275c50 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40698E: Array<double*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x405BF3: Data::SetForceData(Array<double*> const&) (Data.cpp:41)
+==10668==    by 0x4038FF: main (twophasemain.cpp:890)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x40679A: Data::~Data() (Data.cpp:225)
+==10668==    by 0x404D12: main (twophasemain.cpp:1072)
+==10668==  Address 0x6275c00 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A5DB: BaseArray::ReSize(int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40698E: Array<double*>::SetSize(int) (array.hpp:130)
+==10668==    by 0x405B3B: Data::SetEllipticData(Array<double*> const&) (Data.cpp:26)
+==10668==    by 0x4038CD: main (twophasemain.cpp:888)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x404F3B: main (twophasemain.cpp:949)
+==10668==  Address 0x62906e0 is 0 bytes inside a block of size 2,312 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40418C: main (twophasemain.cpp:949)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x404F4A: main (twophasemain.cpp:944)
+==10668==  Address 0x6287440 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x404017: main (twophasemain.cpp:944)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x404F59: main (twophasemain.cpp:943)
+==10668==  Address 0x62873e0 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x403FFB: main (twophasemain.cpp:943)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x404F68: main (twophasemain.cpp:942)
+==10668==  Address 0x6287380 is 0 bytes inside a block of size 24 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x403FDF: main (twophasemain.cpp:942)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405737: Array<bool>::~Array() (array.hpp:56)
+==10668==    by 0x404FD1: main (twophasemain.cpp:789)
+==10668==  Address 0x62732a0 is 0 bytes inside a block of size 4 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40571C: Array<bool>::Array(int, int) (array.hpp:52)
+==10668==    by 0x402F0F: main (twophasemain.cpp:789)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405737: Array<bool>::~Array() (array.hpp:56)
+==10668==    by 0x404FE0: main (twophasemain.cpp:788)
+==10668==  Address 0x6273250 is 0 bytes inside a block of size 4 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40571C: Array<bool>::Array(int, int) (array.hpp:52)
+==10668==    by 0x402EF3: main (twophasemain.cpp:788)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405737: Array<bool>::~Array() (array.hpp:56)
+==10668==    by 0x404FEF: main (twophasemain.cpp:787)
+==10668==  Address 0x6273200 is 0 bytes inside a block of size 4 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40571C: Array<bool>::Array(int, int) (array.hpp:52)
+==10668==    by 0x402ED7: main (twophasemain.cpp:787)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x404FFE: main (twophasemain.cpp:786)
+==10668==  Address 0x62731a0 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x402EBB: main (twophasemain.cpp:786)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x40500D: main (twophasemain.cpp:785)
+==10668==  Address 0x6273140 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x402E9F: main (twophasemain.cpp:785)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x40501C: main (twophasemain.cpp:784)
+==10668==  Address 0x62730e0 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x402E83: main (twophasemain.cpp:784)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x40502B: main (twophasemain.cpp:783)
+==10668==  Address 0x6273080 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x402E67: main (twophasemain.cpp:783)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x405049: main (twophasemain.cpp:764)
+==10668==  Address 0x625a210 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x402C71: main (twophasemain.cpp:764)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056F1: Array<double*>::~Array() (array.hpp:56)
+==10668==    by 0x405058: main (twophasemain.cpp:720)
+==10668==  Address 0x6245770 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056D6: Array<double*>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4027F1: main (twophasemain.cpp:720)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x4056AB: Array<int>::~Array() (array.hpp:56)
+==10668==    by 0x405076: main (twophasemain.cpp:698)
+==10668==  Address 0x61f4860 is 0 bytes inside a block of size 8 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405690: Array<int>::Array(int, int) (array.hpp:52)
+==10668==    by 0x40267C: main (twophasemain.cpp:698)
+==10668== 
+==10668== Mismatched free() / delete / delete []
+==10668==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A50C: BaseArray::~BaseArray() (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x405665: Array<double>::~Array() (array.hpp:56)
+==10668==    by 0x405085: main (twophasemain.cpp:694)
+==10668==  Address 0x61f4600 is 0 bytes inside a block of size 32 alloc'd
+==10668==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x47A481: BaseArray::BaseArray(int, int, int) (in /home/qdeng/Documents/repository/generalfem/applications/twophasemain.exe)
+==10668==    by 0x40564A: Array<double>::Array(int, int) (array.hpp:52)
+==10668==    by 0x4025B4: main (twophasemain.cpp:694)
+==10668== 
+==10668== 
+==10668== HEAP SUMMARY:
+==10668==     in use at exit: 9,372 bytes in 3 blocks
+==10668==   total heap usage: 100,626 allocs, 100,623 frees, 9,669,030 bytes allocated
+==10668== 
+==10668== 9,372 (24 direct, 9,348 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==10668==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10668==    by 0x461D18: TMesh<2>::GetEdgeToElementTable() const (mesh.cpp:739)
+==10668==    by 0x40B53C: Postprocessing::ComputeLinearConservativeTriangularFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:81)
+==10668==    by 0x40B382: Postprocessing::ComputeConservativeFlux(Vector&, Vector&, Array<double*>&, Array<double*>&, Array<double*>&, Array<double>&) (postprocessing.cpp:56)
+==10668==    by 0x404560: main (twophasemain.cpp:1003)
+==10668== 
+==10668== LEAK SUMMARY:
+==10668==    definitely lost: 24 bytes in 1 blocks
+==10668==    indirectly lost: 9,348 bytes in 2 blocks
+==10668==      possibly lost: 0 bytes in 0 blocks
+==10668==    still reachable: 0 bytes in 0 blocks
+==10668==         suppressed: 0 bytes in 0 blocks
+==10668== 
+==10668== For counts of detected and suppressed errors, rerun with: -v
+==10668== Use --track-origins=yes to see where uninitialised values come from
+==10668== ERROR SUMMARY: 50297 errors from 97 contexts (suppressed: 0 from 0)

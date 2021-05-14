@@ -1,0 +1,136 @@
+include ../comp.mk
+
+INCT =  ../fem/libfem.a ../mesh/libmesh.a ../general/libgeneral.a \
+	../msrobin/libmsrobin.a ../linalg/lib_linalg.a ../linalg/multifrontal/libmultifrontal.a \
+	../linalg/multifrontal/UMFPACK2.2/libumfpack.a  \
+	../timedependent/libtimedependent.a -lblas -lgfortran
+
+INC =  ../fem/libfem.a ../mesh/libmesh.a ../geometry/libgeometry.a ../general/libgeneral.a \
+	../msrobin/libmsrobin.a ../linalg/lib_linalg.a ../linalg/multifrontal/libmultifrontal.a \
+	../linalg/multifrontal/UMFPACK2.2/libumfpack.a \
+	-lblas /usr/local/gfortran/lib/libgfortran.dylib -lgsl -lm -lgslcblas	
+
+TRGTS = LINALG MULTIFRONTAL UMFPACK MESH FEM MSROBIN GENERAL TIME 
+
+all: $(TRGTS)
+
+LINALG:
+	cd ../linalg ; make all
+
+MULTIFRONTAL:
+	cd ../linalg/multifrontal ; make
+
+UMFPACK:
+	cd ../linalg/multifrontal/UMFPACK2.2 ; make
+
+MESH:
+	cd ../mesh ; make all
+
+FEM:
+	cd ../fem ; make all
+
+MSROBIN:
+	cd ../msrobin ; make all
+
+GENERAL:
+	cd ../general ; make
+
+TIME:	
+	cd ../timedependent ; make
+
+GEOMETRY:
+	cd ../geometry ; make
+
+%.o: %.cpp
+	$(CC) -c $(CFLAGS) -o $@ $< 
+
+
+solvertest: solvertest.o all
+	$(CC) $(CFLAGS) -o solvertest.exe solvertest.o $(INC)
+
+geometrytest: geometrytest.o all
+	$(CC) $(CFLAGS) -o geometrytest.exe geometrytest.o $(INC)
+
+lshape: lshape.o all
+	$(CC) $(CFLAGS) -o lshape.exe lshape.o $(INC)
+
+testfunc: testfunc.o all
+	$(CC) $(CFLAGS) -o testfunc.exe testfunc.o $(INC)
+
+stokestest: stokestest.o all
+	$(CC) $(CFLAGS) -o stokestest.exe stokestest.o $(INC)
+
+stokestestP1P0: stokestestP1P0.o all
+	$(CC) $(CFLAGS) -o stokestestP1P0.exe stokestestP1P0.o $(INC)
+
+nonconformstokes: nonconformstokes.o all
+	$(CC) $(CFLAGS) -o nonconformstokes.exe nonconformstokes.o $(INC)
+
+ellipticcons: ellipticcons.o all
+	$(CC) $(CFLAGS) -o ellipticcons.exe ellipticcons.o $(INCT)
+
+stokes-darcy: stokes-darcy.o all
+	$(CC) $(CFLAGS) -o stokes-darcy.exe stokes-darcy.o $(INCT)
+
+timeadvec: timeadvec.o all
+	$(CC) $(CFLAGS) -o timeadvec.exe timeadvec.o $(INCT)
+
+test2dlinear: test2dlinear.o all
+	$(CC) $(CFLAGS) -o test2dlinear.exe test2dlinear.o $(INCT)
+
+test2dquadratic: test2dquadratic.o all
+	$(CC) $(CFLAGS) -o test2dquadratic.exe test2dquadratic.o $(INCT)
+
+test2dcubic: test2dcubic.o all
+	$(CC) $(CFLAGS) -o test2dcubic.exe test2dcubic.o $(INCT)
+
+main: main.o all
+	$(CC) $(CFLAGS) -o main.exe main.o $(INCT)
+
+singlephasemain: singlephasemain.o all
+	$(CC) $(CFLAGS) -o singlephasemain.exe singlephasemain.o $(INCT)
+
+quadraticspfmain: quadraticspfmain.o all
+	$(CC) $(CFLAGS) -o quadraticspfmain.exe quadraticspfmain.o $(INCT)
+
+twophasemain: twophasemain.o all
+	$(CC) $(CFLAGS) -o twophasemain.exe twophasemain.o $(INCT)
+
+qtwophasemain: qtwophasemain.o all
+	$(CC) $(CFLAGS) -o qtwophasemain.exe qtwophasemain.o $(INCT)
+
+elasticmain: elasticmain.o all	
+	$(CC) $(CFLAGS) -o elasticmain.exe elasticmain.o $(INCT)
+
+msrmain: msrmain.o all
+	$(CC) $(CFLAGS) -o msrmain.exe msrmain.o $(INCT)
+
+msrelastic: msrelastic.o all
+	$(CC) $(CFLAGS) -o msrelastic.exe msrelastic.o $(INCT)
+
+msrirregular: msrirregular.o all
+	$(CC) $(CFLAGS) -o msrirregular.exe msrirregular.o $(INCT)
+
+drift: drift.o all
+	$(CC) $(CFLAGS) -o drift.exe drift.o $(INCT)
+
+testdrift: testdrift.o all
+	$(CC) $(CFLAGS) -o testdrift.exe testdrift.o $(INCT)
+
+supgtest: supgtest.o all
+	$(CC) $(CFLAGS) -o supgtest.exe supgtest.o $(INCT)
+
+advdomtest: advdomtest.o all
+	$(CC) $(CFLAGS) -o advdomtest.exe advdomtest.o $(INCT)
+
+poroelast: poroelast.o all
+	$(CC) $(CFLAGS) -o poroelast.exe poroelast.o $(INCT)
+
+geomech: geomech.o all
+	$(CC) $(CFLAGS) -o geomech.exe geomech.o $(INCT)
+
+geomechtest: geomechtest.o all
+	$(CC) $(CFLAGS) -o geomechtest.exe geomechtest.o $(INCT)
+
+veryclean:
+	rm -f *.exe *.o *.a *~ *.vtk *.jpg *.out

@@ -1,0 +1,582 @@
+timediscr: 0.1 1
+domain: 0.0 1.0 0.0 1.0
+discr: 40 40 2
+permeability equation
+permfunc function 1.0;
+force function pi*(-x+x*x)*(-1+2*y)*cos(pi*z)+pi*(-1+2*x)*(-y+y*y)*cos(pi*z)-2*(-x+x*x)*sin(pi*z)-2*(-y+y*y)*sin(pi*z)
+bottombdry dirichlet
+bdryfunc function 0.0;
+rightbdry dirichlet
+bdryfunc function 0.0;
+topbdry dirichlet
+bdryfunc function 0.0;
+leftbdry dirichlet
+bdryfunc function 0.0;
+elmod equation 
+modfunc function 1.0;
+forcex function (-1+2*x)*(-y+y*y)*sin(pi*z)-(4*(1+x*x+y*(-5+3*y)+x*(-3+4*y))*sin(pi*z))/5.0; 
+forcey function (-x+x*x)*(-1+2*y)*sin(pi*z)-(4*(1+3*x*x-3*y+y*y+x*(-5+4*y))*sin(pi*z))/5.0;
+xbottombdry dirichlet
+bdryfunc function 0.0;
+ybottombdry dirichlet
+bdryfunc function 0.0;
+xrightbdry dirichlet
+bdryfunc function 0.0;
+yrightbdry dirichlet
+bdryfunc function 0.0;
+xtopbdry dirichlet
+bdryfunc function 0.0;
+ytopbdry dirichlet
+bdryfunc function 0.0;
+xleftbdry dirichlet
+bdryfunc function 0.0;
+yleftbdry dirichlet
+bdryfunc function 0.0;
+inituone function 0.0;
+initutwo function 0.0;
+initp function 0.0;
+solp function sin(pi*0.1)*(x-x*x)*(y-y*y);
+soluone function sin(pi*0.1)*(x-x*x)*(y-y*y);
+solutwo function sin(pi*0.1)*(x-x*x)*(y-y*y);
+px function sin(pi*0.1)*(1.0-2.0*x)*(y-y*y);
+py function sin(pi*0.1)*(x-x*x)*(1-2.0*y);
+
+
+
+
+
+timediscr: 0.01 1
+domain: 0.0 1.0 0.0 1.0
+discr: 40 40 2
+permeability equation
+permfunc function 1.0;
+force function 0.0;
+bottombdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+rightbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+topbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+leftbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+elmod equation
+modfunc function 1.0;
+forcex function 0.0;
+forcey function 0.0;
+xbottombdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+ybottombdry dirichlet
+bdryfunc function (exp(0.01)*(1-exp(x-y)));
+xrightbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+yrightbdry dirichlet
+bdryfunc function (exp(0.01)*(1-exp(x-y)));
+xtopbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+ytopbdry dirichlet
+bdryfunc function (exp(0.01)*(1-exp(x-y)));
+xleftbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+yleftbdry dirichlet
+bdryfunc function (exp(0.01)*(1-exp(x-y)));
+inituone function (exp(x-y));
+initutwo function (1.0-exp(x-y));
+initp function exp(x-y);
+solp function exp(x-y+0.01);
+soluone function exp(x-y+0.01);
+solutwo function exp(0.01)*(1-exp(x-y));
+px function exp(x-y+0.01);
+py function -exp(x-y+0.01);
+
+
+
+
+timediscr: 0.01 1
+domain: 0.0 1.0 0.0 1.0
+discr: 4 4 2
+permeability equation
+permfunc function 1.0;
+force function 0.0;
+bottombdry neumann
+bdryfunc function -(exp(x-y+0.01));
+rightbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+topbdry neumann
+bdryfunc function (exp(x-y+0.01));
+leftbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+elmod equation
+modfunc function 1.0;
+forcex function 0.0;
+forcey function 0.0;
+xbottombdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+ybottombdry dirichlet
+bdryfunc function (exp(0.01)*(1-exp(x-y)));
+xrightbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+yrightbdry dirichlet
+bdryfunc function (exp(0.01)*(1-exp(x-y)));
+xtopbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+ytopbdry dirichlet
+bdryfunc function (exp(0.01)*(1-exp(x-y)));
+xleftbdry dirichlet
+bdryfunc function (exp(x-y+0.01));
+yleftbdry dirichlet
+bdryfunc function (exp(0.01)*(1-exp(x-y)));
+inituone function (exp(x-y));
+initutwo function (1.0-exp(x-y));
+initp function exp(x-y);
+solp function exp(x-y+0.01);
+soluone function exp(x-y+0.01);
+solutwo function exp(0.01)*(1-exp(x-y));
+
+
+
+timediscr: 1.0 2
+domain: 0.0 1.0 0.0 1.0
+discr: 2 2 3
+permeability equation
+permfunc function 1/((1+x)*(1+y));
+force function 0.0;
+bottombdry neumann
+bdryfunc function 0.0;
+rightbdry dirichlet
+bdryfunc function 0.0;
+topbdry neumann
+bdryfunc function 0.0;
+leftbdry dirichlet
+bdryfunc function 1.0;
+elmod equation
+modfunc function 1.0;
+forcex function 0.0;
+forcey function 0.0;
+xbottombdry dirichlet
+bdryfunc function 0.0;
+ybottombdry dirichlet
+bdryfunc function 0.0;
+xrightbdry dirichlet
+bdryfunc function 0.0;
+yrightbdry dirichlet
+bdryfunc function 0.0;
+xtopbdry dirichlet
+bdryfunc function 0.0;
+ytopbdry dirichlet
+bdryfunc function 0.0;
+xleftbdry dirichlet
+bdryfunc function 0.0;
+yleftbdry dirichlet
+bdryfunc function 0.0;
+inituone function 0.0;
+initutwo function 0.0;
+initp function 0.0;
+solp function 0.0;
+soluone function 0.0;
+solutwo function 0.0;
+
+
+
+timediscr: 0.1 1
+domain: 0.0 1.0 0.0 1.0
+discr: 20 20 2
+permeability equation
+permfunc function 1.0;
+force function pi*(-x+x*x)*(-1+2*y)*cos(pi*z)+pi*(-1+2*x)*(-y+y*y)*cos(pi*z)-2*(-x+x*x)*sin(pi*z)-2*(-y+y*y)*sin(pi*z)
+bottombdry dirichlet
+bdryfunc function 0.0;
+rightbdry dirichlet
+bdryfunc function 0.0;
+topbdry dirichlet
+bdryfunc function 0.0;
+leftbdry dirichlet
+bdryfunc function 0.0;
+elmod equation 
+modfunc function 1.0;
+forcex function (-1+2*x)*(-y+y*y)*sin(pi*z)-(4*(1+x*x+y*(-5+3*y)+x*(-3+4*y))*sin(pi*z))/5.0; 
+forcey function (-x+x*x)*(-1+2*y)*sin(pi*z)-(4*(1+3*x*x-3*y+y*y+x*(-5+4*y))*sin(pi*z))/5.0;
+xbottombdry dirichlet
+bdryfunc function 0.0;
+ybottombdry dirichlet
+bdryfunc function 0.0;
+xrightbdry dirichlet
+bdryfunc function 0.0;
+yrightbdry dirichlet
+bdryfunc function 0.0;
+xtopbdry dirichlet
+bdryfunc function 0.0;
+ytopbdry dirichlet
+bdryfunc function 0.0;
+xleftbdry dirichlet
+bdryfunc function 0.0;
+yleftbdry dirichlet
+bdryfunc function 0.0;
+inituone function 0.0;
+initutwo function 0.0;
+initp function 0.0;
+solp function sin(pi*0.1)*(x-x*x)*(y-y*y);
+soluone function sin(pi*0.1)*(x-x*x)*(y-y*y);
+solutwo function sin(pi*0.1)*(x-x*x)*(y-y*y);
+
+
+
+timediscr: 0.01 1
+domain: 0.0 1.0 0.0 1.0
+discr: 10 10 2
+permeability equation
+permfunc function 1.0;
+force function 0.0
+bottombdry dirichlet
+bdryfunc function 0.0;
+rightbdry dirichlet
+bdryfunc function 0.0;
+topbdry dirichlet
+bdryfunc function 0.0;
+leftbdry dirichlet
+bdryfunc function 1.0;
+elmod equation 
+modfunc function 1.0;
+forcex function 0.0; 
+forcey function 0.0;
+xbottombdry dirichlet
+bdryfunc function 0.0;
+ybottombdry dirichlet
+bdryfunc function 0.0;
+xrightbdry dirichlet
+bdryfunc function 0.0;
+yrightbdry dirichlet
+bdryfunc function 0.0;
+xtopbdry dirichlet
+bdryfunc function 0.0;
+ytopbdry dirichlet
+bdryfunc function 0.0;
+xleftbdry dirichlet
+bdryfunc function 0.0;
+yleftbdry dirichlet
+bdryfunc function 0.0;
+inituone function 0.0;
+initutwo function 0.0;
+initp function 0.0;
+solp function sin(pi*0.01)*(x-x*x)*(y-y*y);
+soluone function sin(pi*0.01)*(x-x*x)*(y-y*y);
+solutwo function sin(pi*0.01)*(x-x*x)*(y-y*y);
+
+
+
+
+
+
+timediscr: 0.01 1
+domain: 0.0 1.0 0.0 1.0
+discr: 4 4 2
+permeability equation
+permfunc function 1.0;
+force function pi*(-x+x*x)*(-1+2*y)*cos(pi*z)+pi*(-1+2*x)*(-y+y*y)*cos(pi*z)-2*(-x+x*x)*sin(pi*z)-2*(-y+y*y)*sin(pi*z)
+bottombdry dirichlet
+bdryfunc function 0.0;
+rightbdry dirichlet
+bdryfunc function 0.0;
+topbdry dirichlet
+bdryfunc function 0.0;
+leftbdry dirichlet
+bdryfunc function 0.0;
+elmod equation 
+modfunc function 1.0;
+forcex function (-1+2*x)*(-y+y*y)*sin(pi*z)-(4*(1+x*x+y*(-5+3*y)+x*(-3+4*y))*sin(pi*z))/5.0; 
+forcey function (-x+x*x)*(-1+2*y)*sin(pi*z)-(4*(1+3*x*x-3*y+y*y+x*(-5+4*y))*sin(pi*z))/5.0;
+xbottombdry dirichlet
+bdryfunc function 0.0;
+ybottombdry dirichlet
+bdryfunc function 0.0;
+xrightbdry dirichlet
+bdryfunc function 0.0;
+yrightbdry dirichlet
+bdryfunc function 0.0;
+xtopbdry dirichlet
+bdryfunc function 0.0;
+ytopbdry dirichlet
+bdryfunc function 0.0;
+xleftbdry dirichlet
+bdryfunc function 0.0;
+yleftbdry dirichlet
+bdryfunc function 0.0;
+inituone function 0.0;
+initutwo function 0.0;
+initp function 0.0;
+solp function sin(pi*0.01)*(x-x*x)*(y-y*y);
+soluone function sin(pi*0.01)*(x-x*x)*(y-y*y);
+solutwo function sin(pi*0.01)*(x-x*x)*(y-y*y);
+
+
+
+
+
+
+
+
+
+
+
+timediscr: 0.1 40
+domain: 0.0 1.0 0.0 1.0
+discr: 64 64 2
+permeability equation
+permfunc function 1.0;
+force function (-2*(-x+x*x))/exp(z)-((-x+x*x)*(-1+2*y))/exp(z)-(2*(-y+y*y))/exp(z)-((-1+2*x)*(-y+y*y))/exp(z);
+bottombdry dirichlet
+bdryfunc function 0.0;
+rightbdry dirichlet
+bdryfunc function 0.0;
+topbdry dirichlet
+bdryfunc function 0.0;
+leftbdry dirichlet
+bdryfunc function 0.0;
+elmod equation 
+modfunc function 1.0;
+forcex function ((-1+2*x)*(-y+y*y))/exp(z)-(4*(1+x*x+y*(-5+3*y)+x*(-3+4*y)))/(5.*exp(z));
+forcey function ((-x+x*x)*(-1+2*y))/exp(z)-(4*(1+3*x*x-3*y+y*y+x*(-5+4*y)))/(5.*exp(z));
+xbottombdry dirichlet
+bdryfunc function 0.0;
+ybottombdry dirichlet
+bdryfunc function 0.0;
+xrightbdry dirichlet
+bdryfunc function 0.0;
+yrightbdry dirichlet
+bdryfunc function 0.0;
+xtopbdry dirichlet
+bdryfunc function 0.0;
+ytopbdry dirichlet
+bdryfunc function 0.0;
+xleftbdry dirichlet
+bdryfunc function 0.0;
+yleftbdry dirichlet
+bdryfunc function 0.0;
+inituone function (x-x*x)*(y-y*y);
+initutwo function (x-x*x)*(y-y*y);
+initp function (x-x*x)*(y-y*y);
+solp function exp(-0.01)*(x-x*x)*(y-y*y);
+soluone function exp(-0.01)*(x-x*x)*(y-y*y);
+solutwo function exp(-0.01)*(x-x*x)*(y-y*y);
+
+timediscr: 0.1 1
+domain: 0.0 1.0 0.0 1.0
+discr: 100 100 2
+permeability equation
+permfunc function 1.0;
+force function exp(0.1)*(-3*(-1+y)*y+x*x*(-3+2*y)+x*(3-4*y+2*y*y));
+bottombdry dirichlet
+bdryfunc function 0.0;
+rightbdry dirichlet
+bdryfunc function 0.0;
+topbdry dirichlet
+bdryfunc function 0.0;
+leftbdry dirichlet
+bdryfunc function 0.0;
+elmod equation 
+modfunc function 2+cos(6*pi*x)*sin(12*pi*y);
+forcex function exp(0.1)*(-1+2*x)*(-y+y*y)-(4*exp(0.1)*(2*(1+x*x-5*y+3*y*y+x*(-3+4*y))-3*pi*(-3*(-1+y)*y+x*x*(-1+2*y)+x*(1-8*y+6*y*y))*sin(6*pi*x)*sin(12*pi*y)+cos(6*pi*x)*(6*pi*(-((-1+y)*y)+x*x*(-1+2*y)+x*(1-4*y+2*y*y))*cos(12*pi*y)+(1+x*x-5*y+3*y*y+x*(-3+4*y))*sin(12*pi*y))))/5.;
+forcey function exp(0.1)*(-x+x*x)*(-1+2*y)-(4*exp(0.1)*(2*(1+3*x*x-3*y+y*y+x*(-5+4*y))-3*pi*(-((-1+y)*y)+x*x*(-1+2*y)+x*(1-4*y+2*y*y))*sin(6*pi*x)*sin(12*pi*y)+cos(6*pi*x)*(6*pi*(-((-1+y)*y)+x*x*(-3+6*y)+x*(3-8*y+2*y*y))*cos(12*pi*y)+(1+3*x*x-3*y+y*y+x*(-5+4*y))*sin(12*pi*y))))/5.;
+xbottombdry dirichlet
+bdryfunc function 0.0;
+ybottombdry dirichlet
+bdryfunc function 0.0;
+xrightbdry dirichlet
+bdryfunc function 0.0;
+yrightbdry dirichlet
+bdryfunc function 0.0;
+xtopbdry dirichlet
+bdryfunc function 0.0;
+ytopbdry dirichlet
+bdryfunc function 0.0;
+xleftbdry dirichlet
+bdryfunc function 0.0;
+yleftbdry dirichlet
+bdryfunc function 0.0;
+inituone function (x-x*x)*(y-y*y);
+initutwo function (x-x*x)*(y-y*y);
+initp function (x-x*x)*(y-y*y);
+solp function exp(-0.00001)*(x-x*x)*(y-y*y);
+soluone function exp(-0.00001)*(x-x*x)*(y-y*y);
+solutwo function exp(-0.00001)*(x-x*x)*(y-y*y);
+
+timediscr: 0.1 1
+domain: 0.0 1.0 0.0 1.0
+discr: 100 100 2
+permeability equation
+permfunc function 1.0;
+force function exp(0.1)*(-3*(-1+y)*y+x*x*(-3+2*y)+x*(3-4*y+2*y*y));
+bottombdry dirichlet
+bdryfunc function 0.0;
+rightbdry dirichlet
+bdryfunc function 0.0;
+topbdry dirichlet
+bdryfunc function 0.0;
+leftbdry dirichlet
+bdryfunc function 0.0;
+elmod equation 
+modfunc function 2+cos(6*pi*x)*sin(12*pi*y);
+forcex function exp(0.1)*(-1+2*x)*(-y+y*y)-(4*exp(0.1)*(2*(1+x*x-5*y+3*y*y+x*(-3+4*y))-3*pi*(-3*(-1+y)*y+x*x*(-1+2*y)+x*(1-8*y+6*y*y))*sin(6*pi*x)*sin(12*pi*y)+cos(6*pi*x)*(6*pi*(-((-1+y)*y)+x*x*(-1+2*y)+x*(1-4*y+2*y*y))*cos(12*pi*y)+(1+x*x-5*y+3*y*y+x*(-3+4*y))*sin(12*pi*y))))/5.;
+forcey function exp(0.1)*(-x+x*x)*(-1+2*y)-(4*exp(0.1)*(2*(1+3*x*x-3*y+y*y+x*(-5+4*y))-3*pi*(-((-1+y)*y)+x*x*(-1+2*y)+x*(1-4*y+2*y*y))*sin(6*pi*x)*sin(12*pi*y)+cos(6*pi*x)*(6*pi*(-((-1+y)*y)+x*x*(-3+6*y)+x*(3-8*y+2*y*y))*cos(12*pi*y)+(1+3*x*x-3*y+y*y+x*(-5+4*y))*sin(12*pi*y))))/5.;
+xbottombdry dirichlet
+bdryfunc function 0.0;
+ybottombdry dirichlet
+bdryfunc function 0.0;
+xrightbdry dirichlet
+bdryfunc function 0.0;
+yrightbdry dirichlet
+bdryfunc function 0.0;
+xtopbdry dirichlet
+bdryfunc function 0.0;
+ytopbdry dirichlet
+bdryfunc function 0.0;
+xleftbdry dirichlet
+bdryfunc function 0.0;
+yleftbdry dirichlet
+bdryfunc function 0.0;
+inituone function (x-x*x)*(y-y*y);
+initutwo function (x-x*x)*(y-y*y);
+initp function (x-x*x)*(y-y*y);
+solp function exp(-0.00001)*(x-x*x)*(y-y*y);
+soluone function exp(-0.00001)*(x-x*x)*(y-y*y);
+solutwo function exp(-0.00001)*(x-x*x)*(y-y*y);
+
+
+
+
+
+
+
+
+
+
+
+
+
+domain: 0.0 1.0 0.0 1.0
+discr: 64 64 2
+permeability equation
+permfunc function 1.0;
+force function 0.0;
+bottombdry dirichlet
+bdryfunc function (exp(x-y+0.0001));
+rightbdry dirichlet
+bdryfunc function (exp(x-y+0.0001));
+topbdry dirichlet
+bdryfunc function (exp(x-y+0.0001));
+leftbdry dirichlet
+bdryfunc function (exp(x-y+0.0001));
+elmod equation
+modfunc function 1.0;
+xbottombdry dirichlet
+bdryfunc function (exp(x-y+0.0001));
+ybottombdry dirichlet
+bdryfunc function (exp(0.0001)*(1-exp(x-y)));
+xrightbdry dirichlet
+bdryfunc function (exp(x-y+0.0001));
+yrightbdry dirichlet
+bdryfunc function (exp(0.0001)*(1-exp(x-y)));
+xtopbdry dirichlet
+bdryfunc function (exp(x-y+0.0001));
+ytopbdry dirichlet
+bdryfunc function (exp(0.0001)*(1-exp(x-y)));
+xleftbdry dirichlet
+bdryfunc function (exp(x-y+0.0001));
+yleftbdry dirichlet
+bdryfunc function (exp(0.0001)*(1-exp(x-y)));
+timediscr: 0.0001 1
+inituone function (exp(x-y));
+initutwo function (1.0-exp(x-y));
+solp function exp(x-y+0.0001);
+soluone function exp(x-y+0.0001);
+solutwo function exp(0.0001)*(1-exp(x-y));
+
+domain: 0.0 1.0 0.0 1.0
+discr: 64 64 2
+permeability equation
+permfunc function 1.0;
+force function 0.0;
+bottombdry dirichlet
+bdryfunc function (exp(x-y+0.001));
+rightbdry dirichlet
+bdryfunc function (exp(x-y+0.001));
+topbdry dirichlet
+bdryfunc function (exp(x-y+0.001));
+leftbdry dirichlet
+bdryfunc function (exp(x-y+0.001));
+elmod equation
+modfunc function 1.0;
+xbottombdry dirichlet
+bdryfunc function (exp(x-y+0.001));
+ybottombdry dirichlet
+bdryfunc function (exp(0.001)*(1-exp(x-y)));
+xrightbdry dirichlet
+bdryfunc function (exp(x-y+0.001));
+yrightbdry dirichlet
+bdryfunc function (exp(0.001)*(1-exp(x-y)));
+xtopbdry dirichlet
+bdryfunc function (exp(x-y+0.001));
+ytopbdry dirichlet
+bdryfunc function (exp(0.001)*(1-exp(x-y)));
+xleftbdry dirichlet
+bdryfunc function (exp(x-y+0.001));
+yleftbdry dirichlet
+bdryfunc function (exp(0.001)*(1-exp(x-y)));
+timediscr: 0.001 1
+inituone function (exp(x-y));
+initutwo function (1.0-exp(x-y));
+solp function exp(x-y+0.001);
+soluone function exp(x-y+0.001);
+solutwo function exp(0.001)*(1-exp(x-y));
+
+
+
+domain: 0.0 1.0 0.0 1.0
+discr: 64 64 2
+permeability equation
+permfunc function 1.0;
+force function 0.0;
+bottombdry dirichlet
+bdryfunc function (exp(x-y+0.1));
+rightbdry dirichlet
+bdryfunc function (exp(x-y+0.1));
+topbdry dirichlet
+bdryfunc function (exp(x-y+0.1));
+leftbdry dirichlet
+bdryfunc function (exp(x-y+0.1));
+elmod equation
+modfunc function 1.0;
+xbottombdry dirichlet
+bdryfunc function (exp(x-y+0.1));
+ybottombdry dirichlet
+bdryfunc function (exp(0.1)*(1-exp(x-y)));
+xrightbdry dirichlet
+bdryfunc function (exp(x-y+0.1));
+yrightbdry dirichlet
+bdryfunc function (exp(0.1)*(1-exp(x-y)));
+xtopbdry dirichlet
+bdryfunc function (exp(x-y+0.1));
+ytopbdry dirichlet
+bdryfunc function (exp(0.1)*(1-exp(x-y)));
+xleftbdry dirichlet
+bdryfunc function (exp(x-y+0.1));
+yleftbdry dirichlet
+bdryfunc function (exp(0.1)*(1-exp(x-y)));
+timediscr: 0.1 1
+inituone function (exp(x-y));
+initutwo function (1.0-exp(x-y));
+solp function exp(x-y+0.1);
+soluone function exp(x-y+0.1);
+solutwo function exp(0.1)*(1-exp(x-y));
+
+
+
+
+
+
+
+
+
+
+
+
+
