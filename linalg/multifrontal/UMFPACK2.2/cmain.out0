@@ -1,0 +1,137 @@
+ ===========================================================UMC2FA input:
+ Scalar arguments:
+    N:                    5 : order of matrix A
+    NE:                  12 : entries in matrix A
+    JOB:                  0 : matrix A not preserved
+    TRANSA:         ignored : factorize A
+    LVALUE:             300 : size of VALUE array
+    LINDEX:             300 : size of INDEX array
+ Control parameters, normally initialized by UMC21I:
+    ICNTL (1):            6 : I/O unit for error and warning messages
+    ICNTL (2):            6 : I/O unit for diagnostics
+    ICNTL (3):            4 : printing control
+    ICNTL (4):            1 : use block triangular form (BTF)
+    ICNTL (5):            4 : columns examined during pivot search
+    ICNTL (6):            0 : do not preserve symmetry
+    ICNTL (7):           16 : block size for dense matrix multiply
+    CNTL (1):    0.1000E+00 : relative pivot tolerance
+    CNTL (2):    0.2000E+01 : frontal matrix growth factor
+    KEEP (6):    2147483647 : largest positive integer
+    KEEP (7):            64 : dense row/col control, d1
+    KEEP (8):             1 : dense row/col control, d2
+ Input matrix A (entry: row, column, value):
+            1:            1            1 (real:  0.2000E+01 imag:  0.1000E+01)
+            2:            1            2 (real:  0.3000E+01 imag:  0.2000E+01)
+            3:            2            1 (real:  0.3000E+01 imag: -0.1000E+01)
+            4:            2            3 (real:  0.4000E+01 imag: -0.1000E+01)
+            5:            2            5 (real:  0.6000E+01 imag:  0.3000E+01)
+            6:            3            2 (real: -0.1000E+01 imag:  0.1000E+01)
+            7:            3            3 (real: -0.3000E+01 imag:  0.2000E+01)
+            8:            3            4 (real:  0.2000E+01 imag:  0.0000E+00)
+            9:            4            3 (real:  0.1000E+01 imag: -0.1000E+01)
+           10:            5            2 (real:  0.4000E+01 imag:  0.0000E+00)
+           11:            5            3 (real:  0.2000E+01 imag:  0.0000E+00)
+           12:            5            5 (real:  0.1000E+01 imag:  0.9000E+01)
+ ===========================================================end of UMC2FA input 
+ ===========================================================UMC2FA output:
+ Output information:
+    INFO (1):             0 : no error or warning occurred
+    INFO (2):             0 : duplicate entries in A
+    INFO (3):             0 : invalid entries in A (indices not in 1..N)
+    INFO (4):             0 : invalid entries in A (not in prior pattern)
+    INFO (5):            12 : entries in A after summing duplicates
+                              and removing invalid entries
+    INFO (6):             8 : entries in diagonal blocks of A
+    INFO (7):             4 : entries in off-diagonal blocks of A
+    INFO (8):             2 : 1-by-1 diagonal blocks in A
+    INFO (9):             3 : diagonal blocks in A (>1 only if BTF used)
+    INFO (10):            3 : entries below diagonal in L
+    INFO (11):            3 : entries above diagonal in U
+    INFO (12):           15 : entries in L + U + offdiagonal blocks of A
+    INFO (13):            1 : frontal matrices
+    INFO (14):            0 : integer garbage collections
+    INFO (15):            0 : real garbage collections
+    INFO (16):            0 : diagonal pivots chosen
+    INFO (17):            5 : numerically valid pivots found in A
+    INFO (18):          123 : memory used in INDEX
+    INFO (19):          128 : minimum memory needed in INDEX
+    INFO (20):           33 : memory used in VALUE
+    INFO (21):           27 : minimum memory needed in VALUE
+    INFO (22):           90 : memory needed in INDEX for next call to UMC2RF
+    INFO (23):           30 : memory needed in VALUE for next call to UMC2RF
+    RINFO (1):   0.3600E+02 : total BLAS flop count
+    RINFO (2):   0.1200E+02 : assembly flop count
+    RINFO (3):   0.4200E+02 : pivot search flop count
+    RINFO (4):   0.1200E+02 : Level-1 BLAS flop count
+    RINFO (5):   0.2400E+02 : Level-2 BLAS flop count
+    RINFO (6):   0.0000E+00 : Level-3 BLAS flop count
+ -------------------------------------------------------------------------------
+ Entries not in diagonal blocks (stored by row):
+ one entry per line (column index, value):
+    row:            1
+            2: (real: -0.1000E+01 imag:  0.1000E+01)
+            5: (real: -0.3000E+01 imag:  0.2000E+01)
+    row:            2
+            5: (real:  0.2000E+01 imag:  0.0000E+00)
+    row:            4
+            5: (real:  0.4000E+01 imag: -0.1000E+01)
+ -------------------------------------------------------------------------------
+ LU factors:
+ Block:            1 (singleton) at index :            1
+       value: (real:  0.2000E+01 imag:  0.0000E+00)
+ ...............................................................................
+ Block:            2 first index:            2 last index:            4
+       L, col:            1
+            1: (real:  0.1000E+01 imag:  0.0000E+00)
+            2: (real:  0.7500E+00 imag:  0.5000E+00)
+            3: (real:  0.0000E+00 imag:  0.0000E+00)
+       L, col:            2
+            2: (real:  0.1000E+01 imag:  0.0000E+00)
+            3: (real:  0.1126E-01 imag:  0.8218E+00)
+       L, col:            3
+            3: (real:  0.1000E+01 imag:  0.0000E+00)
+       U, row:            1
+            1: (real:  0.4000E+01 imag:  0.0000E+00)
+            2: (real:  0.1000E+01 imag:  0.9000E+01)
+            3: (real:  0.0000E+00 imag:  0.0000E+00)
+       U, row:            2
+            2: (real:  0.3750E+01 imag: -0.7250E+01)
+            3: (real:  0.2000E+01 imag:  0.1000E+01)
+       U, row:            3
+            3: (real:  0.3799E+01 imag: -0.2655E+01)
+ ...............................................................................
+ Block:            3 (singleton) at index :            5
+       value: (real:  0.1000E+01 imag: -0.1000E+01)
+ -------------------------------------------------------------------------------
+ Column permutations
+            4
+            2
+            5
+            1
+            3
+ -------------------------------------------------------------------------------
+ Row permutations
+            3
+            5
+            1
+            2
+            4
+ ===========================================================end of UMC2FA output
+ Solution to Ax=b:
+ real:         0.100000E+01 imag:         0.404375E-06
+ real:         0.200000E+01 imag:         0.000000E+00
+ real:         0.300000E+01 imag:         0.000000E+00
+ real:         0.400000E+01 imag:         0.000000E+00
+ real:         0.500000E+01 imag:         0.000000E+00
+ Solution to modified Ax=b, no iter. refinement:
+ real:        -0.463415E+00 imag:         0.117073E+01
+ real:         0.190735E+01 imag:        -0.381470E+01
+ real:         0.300000E+01 imag:         0.000000E+00
+ real:         0.204633E+01 imag:        -0.186102E+01
+ real:         0.509756E+01 imag:        -0.878048E+00
+ Solution to modified Ax=b, with iter. refinement:
+ real:        -0.463414E+00 imag:         0.117073E+01
+ real:         0.281051E+01 imag:        -0.833020E+00
+ real:         0.300000E+01 imag:         0.000000E+00
+ real:         0.398874E+01 imag:        -0.821763E+00
+ real:         0.509756E+01 imag:        -0.878048E+00
